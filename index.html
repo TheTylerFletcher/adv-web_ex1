@@ -8,11 +8,11 @@
 </head>
 
 <body>
-    <header class="top-nav">
+    <header class="top-nav container">
         <div>
           <img src="image/logo.png" alt="logo">
         </div>
-    <input id="menu-toggle" type="checkbox" />
+    <input id="menu-toggle" type="checkbox"/>
     <label class="menu-button-container" for="menu-toggle">
     <div class="menu-button"></div>
         </label>
@@ -26,7 +26,22 @@
             <li><a href="#">Contact Us</a></li>
         </ul>
     </header>
-    
+    <div class="top">
+        <div class="container flex">
+            <div class="twocol"><img src="image/logo.png"></div>
+            <div class="ninecol">
+                <ul class="flex space-between">
+                    <li><a href="#"></a>Home</li>
+                    <li><a href="#"></a>Menu</li>
+                    <li><a href="#"></a>Reservations</li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">The Blog</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <section id="hero">
         <div class="black-background">
             <h2>All THE PASTA<br>YOU CARE TO EAT!</h2>
@@ -36,22 +51,74 @@
         </div>
     </section>
     <section class="container flex space-between second">
-        <div class="half pizza">
+        <div class="third pizza column">
             <img src="image/pizzaicon.jpg" alt="pizza icon line drawing">
             <h3>The Finest Ingredients</h3>
             <p>Italian Joy Restaurant is a place that takes pride in the fresh ingredients that make up our tasty dishes.</p>
             <a href="#">Learn More</a>
         </div>
-        <div class="half scooter">
+        <div class="third scooter column">
             <img src="image/deliveryIcon.png" alt="scooter line drawing">
             <h3>The Quickest Delivery</h3>
             <p>Order online today and have hot, fresh delicisous Italian food delivered right to your front door</p>
             <a href="#">Learn More</a>
         </div>
+        <div class="third best-menu column">
+            <img src="image/menuIcon.png">
+            <h3>The Best Menu</h3>
+            <p>Our menu of pasta, pizza and Italian cuisine handmade with love, from scratch, daily.</p>
+            <a href="#">Learn More</a>
+        </div>
     </section>
     <section class="angled-pizza">
+        <div class="container">
             <h1>Large Pizza <br>w/Unlimited <br>Toppings</h1>
-            <h1><sup>$</sup>12.<sup>99</sup></h1>
+            <h3><sup>$</sup>12.<sup>99</sup></h3>
+        </div>
     </section>
+    <section class="location">
+       <h1>OUR Location</h1>
+        <img src="image/map.jpg" alt="map location">
+    </section>
+    <div class="gallery flex">
+        <img src="image/chacutterie.jpg" class="qtr" alt="pizza on wooden pan">
+        <img src="image/pizza1.jpg" class="qtr" alt="wine and cheese">
+        <img src="image/pizza2.jpg" class="qtr" alt="a slice of surpreame pizza being puled up">
+        <img src="image/wine.jpg" class="qtr" alt="a chacutterrie bored">
+    </div>
+    <footer>
+        <div class="center">
+            <h1>Italian joy</h1>
+            <p>now with 2 loctions</p>
+        </div>
+        <div class="container flex">
+            <div class="half">
+                <ul>
+                    <li>123 Nowhere Lane</li>
+                    <li>Orlando, Florida 32806</li>
+                    <li><a href="#">(407) 555-1234</a></li>
+                    <li><a href="#">orl@italianjoy.com</a></li>
+                </ul>
+            </div>
+               <div class="half">
+                <ul>
+                    <li>456 Here'n There Lane</li>
+                    <li>Casselberry, Florida 32707</li>
+                    <li><a href="#">(407) 555-1234</a></li>
+                    <li><a href="#">cass@italianjoy.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <hr>
+        </div>
+        <h3>Join our mailing list</h3>
+        <div class="container center">
+            <form>
+                <input type="email" value="Email Address">
+                <button>Submit</button>
+            </form>
+        </div>
+    </footer>
 </body>
 </html>

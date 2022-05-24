@@ -1,5 +1,5 @@
 /* This will effect everything from 0 to 576px */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&family=Oswald:wght@200;300;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -22,12 +22,29 @@ body {
     flex-wrap: wrap;
 }
 .space-between {
-    align-content: space-between;
+    justify-content: space-between;
 }
-
+.col {
+    width: 8%;
+}
+.twocol {
+    width: 20%;
+}
+.qtr {
+    width: 25%;
+}
+.sevencol {
+    width: 56%;
+}
+.ninecol {
+    width: 72%;
+}
 /*nav styles*/
 header {
     margin: 2rem 0;
+}
+.top {
+    display: none;
 }
 .top-nav {
   display: flex;
@@ -144,16 +161,113 @@ header {
 
 /*second section*/
 .half {
+    width: 50%;
+    text-align: center;
+}
+.third {
     margin: 1.5rem 0 1.7rem 0;
     width: 50%;
     text-align: center;
 }
-.half .scooter a {
+.third img {
+    margin-bottom: 2.06rem;
+}
+a {
     color: ababab;
 }
+.best-menu {
+    display: none;
+}
+/*third section*/
+.angled-pizza {
+    background: url("../image/pizza_ad.jpg")no-repeat;
+    background-size: cover;
+    height: 16.6rem;
+    color: white;
+    text-align: right;
+    margin-bottom: 2rem;
+}
+.angled-pizza h1 {
+    padding-top: 2.69rem;
+    font: 1.93rem/2.5rem 'oswald';
+    font-weight: 200;
+}
+.angled-pizza h3 {
+    font-family: 'Oswald';
+    font-size: 2.03rem;
+    font-weight: 800;
+}
+/*location*/
+.location {
+    background: #d9e5d9;
+    align-content: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+.location h1 {
+    padding: 1rem 0;
+    font-family: 'oswald';
+    font-size: 1.9rem;
+    font-weight: 200;
+}
+.location img{
+    width: 100%;
+}
+/*footer*/
+footer {
+    background: black;
+    color: #575757;
+}
+footer h1 {
+    font-family: 'Oswald';
+    font-weight: 200;
+    font-size: 1.9rem;
+}
+footer p {
+    font-family: 'Open Sans';
+    font-size: .63rem;
+}
+footer h3 {
+    font-family: 'Oswald';
+    font-weight: 300;
+    font-size: .88rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+footer .center {
+    padding-top: .72rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+footer li {
+    list-style-type: none;
+}
+footer a,  hr {
+    color: #575757;
+}
+footer hr {
+    height: 3px;
+    width: 59%;
+}
+footer button {
+    background: #575757;
+    color: #c2c2c2;
+    height: 26px;
+    padding: 0 .25rem;
+}
+input {
+    width: 12rem;
+    height: 26px;
+    margin-bottom: 1.1rem;
+}
+.column {
+    flex-direction: column;
+}
+.gallery {
+    display: none;
+}
 /* margin:;edia Queries */
-@media (min-width: 576px) /* for mobile */{}
-@media (max-width: 700px) {
+@media (min-width: 576px) /* for mobile */{
   .menu-button-container {
     display: flex;
   }
@@ -198,5 +312,41 @@ header {
     }
 }
 @media (min-width:768px) /* for tablets */{}
-@media (min-width: 992px) /* for laptops */{}
+@media (min-width: 992px) /* for laptops */{
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+    .top {
+        display: inline;
+        align-items: center;
+    }
+    .top li {
+        list-style-type: none;
+        padding-top: 2.2rem;
+    }
+    .top a {
+        color: #2a2a2a;
+        text-decoration: none;
+    }
+    .top-nav {
+        display: none;
+    }
+    .third {
+        width: 33%;
+    }
+    .best-menu {
+        display: block;
+    }
+    .angled-pizza {
+        display: none;
+    }
+    .location {
+        display: none;
+    }
+    .gallery {
+        display: contents;
+    }
+}
 @media (min-width: 1200px) /* for large devices */{}
