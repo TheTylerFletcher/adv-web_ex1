@@ -40,9 +40,7 @@ body {
     width: 72%;
 }
 /*nav styles*/
-header {
-    margin: 2rem 0;
-}
+
 .top {
     display: none;
 }
@@ -52,7 +50,6 @@ header {
   align-items: center;
   justify-content: space-between;
   color: #FFF;
-  height: 50px;
   padding: 1em;
 }
 
@@ -119,6 +116,49 @@ header {
   transform: rotate(-405deg);
 }
 
+ .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+    .menu a {
+        color: #339933;
+        text-decoration: none;
+    }
+    #menu-toggle ~ .menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ .menu li {
+        border: 1px solid #333;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #222;
+    }
+    .menu > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+
 /*hero styles*/
 #hero {
     background: url("../image/hero.jpg") no-repeat;
@@ -134,7 +174,9 @@ header {
 #hero h2 {
     padding-top: 2.5rem;
     font-family: 'Oswald', sans-serif;
+    font-weight: 200;
     text-align: right;
+    padding-right: .8rem;
 }
 #hero h1, #hero h2 {
     text-align: right;
@@ -143,6 +185,8 @@ header {
     font: 'Oswald';
     font-weight: 200;
     font-size: 2.3rem;
+    padding-right: .8rem;
+    margin-bottom: .65rem;
 }
 #hero P {
     text-align: right;
@@ -150,13 +194,15 @@ header {
     font-weight: 200;
     font-style: italic;
     font-size: .75rem;
+     padding-right: .8rem;
 }
 #hero a {
     color: white;
-    font-size: .75rem;
-    border: 1px solid white;
-    text-align: right;
+    font-size: .31rem;
+    border: 2px solid white;
     text-decoration: none;
+    margin-left: 2rem;
+    padding: .41rem .75rem;
 }
 
 /*second section*/
@@ -222,6 +268,7 @@ footer h1 {
     font-family: 'Oswald';
     font-weight: 200;
     font-size: 1.9rem;
+    padding-top: .72rem;
 }
 footer p {
     font-family: 'Open Sans';
@@ -246,6 +293,7 @@ footer a,  hr {
     color: #575757;
 }
 footer hr {
+    margin: 2.34rem auto 1.1rem;
     height: 3px;
     width: 59%;
 }
@@ -268,51 +316,11 @@ input {
 }
 /* margin:;edia Queries */
 @media (min-width: 576px) /* for mobile */{
-  .menu-button-container {
-    display: flex;
-  }
-  .menu {
-    position: absolute;
-    top: 0;
-    margin-top: 50px;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-    .menu a {
-        color: #339933;
-        text-decoration: none;
-    }
-    #menu-toggle ~ .menu li {
-        height: 0;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-    #menu-toggle:checked ~ .menu li {
-        border: 1px solid #333;
-        height: 2.5em;
-        padding: 0.5em;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-    .menu > li {
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        padding: 0.5em 0;
-        width: 100%;
-        color: white;
-        background-color: #222;
-    }
-    .menu > li:not(:last-child) {
-        border-bottom: 1px solid #444;
-    }
+ 
 }
 @media (min-width:768px) /* for tablets */{}
 @media (min-width: 992px) /* for laptops */{
+    
     .container {
         width: 80%;
         margin: 0 auto;
@@ -324,7 +332,13 @@ input {
     }
     .top li {
         list-style-type: none;
-        padding-top: 2.2rem;
+        margin-top: 32px;
+        padding-right: 10px;
+        border-right: 1px solid black;
+    }
+    
+    top li:last-child {
+        border: none;
     }
     .top a {
         color: #2a2a2a;
@@ -335,6 +349,8 @@ input {
     }
     .third {
         width: 33%;
+        margin-top: 4.75rem;
+        margin-bottom: 8rem;
     }
     .best-menu {
         display: block;
@@ -347,6 +363,39 @@ input {
     }
     .gallery {
         display: contents;
+        margin: 0 auto;
+    }
+    .gallery img {
+        width: 25%;
+        margin: -1px -4px -5px 0;
+    }
+    footer {
+        margin-top: 5rem;
     }
 }
-@media (min-width: 1200px) /* for large devices */{}
+@media (min-width: 1200px) /* for large devices */{
+    #hero {
+        height: 48rem;
+    }
+    #hero .black-background {
+        height: 48rem;
+        width: 34%;
+    }
+    #hero h2 {
+        padding-top: 9.2rem;
+        font: 4.81rem/5rem 'oswald';
+        font-weight: 200;
+    }
+    #hero p {
+        padding-top: 2.56rem;
+        padding-bottom: .75rem;
+        font-size: .9rem;
+    }
+    #hero h1 {
+        font-size: 5.8rem;
+        padding-bottom: 2.5rem;
+    }
+    #hero a {
+        margin-left: 13rem;
+    }
+}
